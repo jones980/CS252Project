@@ -1,14 +1,10 @@
 
 body {
-    font-size: 20px;
+	margin: 0;
+	padding: 0; 
+    font-size: 1em;
     color: white;
     text-shadow: 0 1px 0 black, 0 0 5px black;
-}
-#scene {
-	position: fixed;
-  	width: auto;
-  	height: 100%;
-  	bottom:0px;
 }
 #snowman {
   	cursor:pointer;
@@ -17,12 +13,225 @@ body {
 	background-color: black;
 	text-decoration: none;
 	padding: 4rem 5rem;
-	font-size: 7rem;
+	font-size: 6rem;
 }
 
+#xmas-fireplace {
+	background-image:url('../images/chimney.jpg');
+}
+img {
+    vertical-align: middle;
+}
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Parallax Scroll
+   ========================================================================== */
+body, html {
+	height: 100%;
+	min-height: 100%;
+	background-color: #000000;
+}
+body {
+	
+}
+.no-js {
+	padding-top: 106px;
+}
+p {
+	margin-top: 0;
+}
+
+section {
+	min-width: 960px;
+	opacity: 0;
+}
+
+.loaded section,
+.no-js section {
+	opacity: 1;
+	-webkit-transition: opacity 300ms ease-out;
+	-moz-transition: opacity 300ms ease-out;
+	transition: opacity 300ms ease-out;
+}
+main {
+	overflow-x: hidden;
+}
+#preload {
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.pictures {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.content {
+	max-width: 700px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+
+.content h2  {
+		color: #fff8de;
+		background-color: rgba(0,0,0,0.5);
+		padding: 10px 5px;
+		font-size: 35px;
+		line-height: 38px;
+		margin-bottom: 12px;
+	}
+	.content p {
+		width: 400px;
+		color: #b2b2b2;
+	}
+	.content a {
+		color: #b2b2b2;
+		text-decoration: underline;
+	}
+#slide-1 .pictures {background-image:url('../images/chimney.jpg')}
+#slide-1 .content {
+	bottom: 200px;
+	top: auto;
+}
+
+/* Slide 2 */
+#slide-2 .pictures {background-image:url('../images/santa-moon.jpg')}
+#slide-2 .content {
+	margin-left: -450px;
+	top: auto;
+}
+#slide-2 p {
+	position: fixed;
+	top: 70%;
+}
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
 /*This snowfall part of code gotten and modified from http://codepen.io/NickyCDK/pen/AIonk 
 Author:Nicky Christensen */
-#snow{
+#snow {
 	background: none;
 	font-family: Androgyne;
 	background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
@@ -58,21 +267,21 @@ Author:Nicky Christensen */
   100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
 }	
 
-.container {
-	background-color: #333;
-	width: 100%;
-}
 .pictures {
 	top: 0px;
 	color: #000;
 	font-family: 'Indie Flower', cursive;
-	padding: 0 2em;
+	margin: 0;
+	padding: 0;
+	/*padding: 0 2em;
 	padding-top: 20px;
+	*/
 	text-align: center;
 	font-size: 4rem;
 	font-weight: 200;
-	background-attachment: fixed;
-	min-height: 400px;
+	/*background-attachment: fixed;*/
+	height: 100%;
+	/*min-height: 400px;*/	
 	background: transparent;
 }
 
@@ -86,5 +295,6 @@ Author:Nicky Christensen */
 	color: #fff;
 	font-weight: bold;
 	text-align: left;
-	font-size: 6rem;
+	font-size: 4rem;
 }
+

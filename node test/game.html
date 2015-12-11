@@ -1,76 +1,99 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+
+<html lang="en" ng-app class="no-js">
 <head>
 	<meta charset="utf-8">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+	<link rel="author" href="https://plus.google.com/u/0/109859280204979591787/about"/>
 	   <!-- Include the core AngularJS library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js">
 	</script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script type="text/javascript" src="js/skrollr.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+	<script src="js/imagesloaded.js"></script>
+
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/modernizr-2.7.1.min.js"></script>
 	<script type="text/javascript" src="js/parallax.min.js"></script>
+	<!--
 	<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
 	<script type="text/javascript" src="js/stell.js"></script>
+    -->
 	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>CS252 STORYBOOK</title>
 </head>	
 
-	<body>
+<body class="loading">
+
+		<div id="preload">
+	       <img src="images/chimney.jpg">
+	       <img src="images/santa-moon.jpg">
+	       <img src="images/snowman.jpg">
+	       <!--
+	       <img src="img/bcg_slide-4.jpg">
+	       -->
+       	</div>
+
+       	<main>
 		<div id="snow">
 		</div>
-<<<<<<< Updated upstream
 		<div class="header">
-			<div class="col-md-26 col-sm-26 col-xs-22">
+			<div class="col-md-20 col-sm-20 col-xs-22">
 				<p class="gamename">' Twas the night</p>
-				<p class="gamename" id="second" > before christmas</p>
+				<p class="gamename" id="second"> before christmas</p>
 			</div>
-		</div>	
-
-		<div class="pictures" id="xmas-fireplace" data-parallax="scroll" data-image-src="images/xmas-fireplace.jpg" data-stellar-background-ratio="0.5" >
-			<p>When all through the house</p>
-			<p>not a creature was stirring </p>
-			<p>not even a mouse;</p>
 		</div>
-		<div class="pictures" id="child" data-parallax="scroll" data-image-src="images/stockings.jpg" data-stellar-background-ratio="0.5">
-			<p>The stockings were hung by the chimney with care</p>
-			<p>in hopes that St. Nicholas soon would be there.</p>
-		</div> 
-		<div class="pictures" id="child" data-parallax="scroll" data-image-src="images/beach.jpeg" data-stellar-background-ratio="0.5">
+
+		<section id="slide-1" class="firstSlide">
+			<div class="pictures" id="xmas-fireplace" data-parallax="scroll" 
+			data-center="background-position: 50% 0px;"
+	        data-top-bottom="background-position: 50% -100px;"
+	        data-anchor-target="#slide-1" >
+	        	<div class="container">
+	        		<div class="content"
+                	data-center="bottom: 200px; opacity: 1"
+                	data-top="bottom: 1200px; opacity: 0"
+                	data-anchor-target="#slide-1 h2"
+                	>
+						<p>When all through the house</p>
+						<p>not a creature was stirring </p>
+						<p>not even a mouse;</p>
+					</div>	
+				</div>	
+			</div>
+		</section>	
+
+		<section id="slide-2" class="firstSlide">
+			<div class="pictures" id="child" data-parallax="scroll" 
+			data-center="background-position: 50% 0px;"
+        	data-top-bottom="background-position: 50% -100px;"
+        	data-bottom-top="background-position: 50% 100px;"
+        	data-anchor-target="#slide-2">
+        		<div class="container">
+            		<div class="content"
+                		data-center="opacity: 1"
+                		data-center-top="opacity: 0"
+                		data--100-bottom="opacity: 0;"
+                		data-anchor-target="#slide-2"
+            		>
+						<p>The stockings were hung by the chimney with care</p>
+						<p>in hopes that St. Nicholas soon would be there.</p>
+					</div>
+				</div>		
+			</div> 
+		</section>	
+		<div class="pictures" id="child" data-parallax="scroll" data-image-src="images/snowman.jpg" data-stellar-background-ratio="0.5">
 			<p>The children were nestled </p>
 			<p>all snug in their beds</p>
 			<p>while visions of sugar plums danced in their heads</p>
 			<p>And Mama in her 'kerchief</p>
 		</div> 
-=======
-		<div id="skrollr-body">
-			<div class="header">
-				<div class="col-md-26 col-sm-26 col-xs-22">
-					<p class="gamename">' Twas the night</p>
-					<p class="gamename" id="second" > before christmas</p>
-				</div>"
-			</div>	
+	</main>
 
-			<div class="pictures" id="sky" data-parallax="scroll" data-image-src="images/sky.png" data-0="width:100%;" data-1000="width:0%;" data-stellar-background-ratio="0.5" >
-				<p>When all through the house</p>
-				<p>not a creature was stirring </p>
-				<p>not even a mouse;</p>
-			</div>
-			<div class="pictures" id="child" data-parallax="scroll" data-image-src="images/blue.jpeg" data-stellar-background-ratio="0.5">
-				<p>The stockings were hung</p> 
-				<p>by the chimney with care</p>
-				<p>in hopes that St. Nicholas soon would be there.</p>
-			</div> 
-			<div class="pictures" id="child" data-parallax="scroll" data-image-src="images/beach.jpeg" data-stellar-background-ratio="0.5">
-				<p>The children were nestled </p>
-				<p>all snug in their beds</p>
-				<p>while visions of sugar plums danced in their heads</p>
-				<p>And Mama in her 'kerchief</p>
-			</div> 
-		</div>	
->>>>>>> Stashed changes
 	</body>
 </html>    

@@ -1,24 +1,40 @@
-function init() {
-	var background;
-	var stage;
-	var ground;
-	var canvas;
-	var sprite;
-	var g;
-	var manifest;
-	
-	canvas = document.getElementById("tutorialCanvas");	
-	stage = new createjs.Stage(canvas);
-	background = new createjs.Bitmap("images/sky.png");
-		//g = new Graphics();
-		//	g.beginStroke(Graphics.getRGB(0,0,0));
-		//	var s = new Shape(g);
-		//	s.width = 640;
-		//	s.height = 480;
-	stage.addChild(background);
-	ground = new createjs.Bitmap("images/ground.png");
-	stage.addChild(ground);
-	ground.y = 164;
+( function( $ ) {
+	$window = $(window);
+	$body = $('body');
+	$slide = $('.firstSlide');
 
-	stage.update();
-}
+	$body.imagesLoaded( function() {
+		setTimeout(function() {
+		      
+		      // Resize sections
+		      adjustWindow();
+		      
+		      // Fade in sections
+			  $body.removeClass('loading').addClass('loaded');
+			  
+		}, 800);
+	});
+	
+	function adjustWindow(){
+		
+		// Init Skrollr
+		var s = skrollr.init({
+		    forceHeight: false
+		});
+		
+		// Get window size
+	    winH = $window.height();
+	    
+	    // Keep minimum height 550
+	    if(winH <= 550) {
+			winH = 550;
+		} 
+	    
+	    // Resize our slides
+	 	$slide.height(winH);
+	 
+	// Refresh Skrollr after resizing our sections
+		s.refresh($('.firstSlide'));
+	}	
+
+} )( jQuery );

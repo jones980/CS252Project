@@ -10,6 +10,7 @@ body {overflow:auto; height:7600px; }
 .ribbon {background:#49675f; height:40px; top:50%; margin-top:-20px; z-index:3; }
 #pattern2 { background:url('../images/pattern.png'); z-index:1;}
 #scene5 {background: #000 url('../images/santa-moon.jpg') center center no-repeat; z-index: 4; width: 100%e  }
+#scene6 {background: #000 url('../');}
 /*#wish3 {background:#8dbaae url('../images/snowman.jpg') no-repeat center center; z-index:6; border-radius:50%;}
 */#info {background:#fff; width:20%; height:50px; bottom:auto; z-index:10; font-size:22px;  line-height:50px;}
 
