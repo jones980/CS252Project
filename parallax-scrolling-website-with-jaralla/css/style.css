@@ -51,7 +51,7 @@ width:100%;
 height:100%;
 }
 
-.behind, .redball1, .redball2{
+.behind, .redball1, .redball2, .behind2{
 display:block;
 position:absolute;
 }
@@ -66,15 +66,15 @@ position:absolute;
 z-index:-1;
 }
 
-.behind2{
+/*.behind2{
 width:100%;
 height:110%;
 background:url(images/chimney.jpg) top center no-repeat;
 top:0%;
 left:0%;
-position:absolute;
+position:relative;
 z-index:-1;
-}
+}*/
 
 .redball1{
 width:356px;
